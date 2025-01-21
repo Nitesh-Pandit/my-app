@@ -9,6 +9,7 @@ import Statement3 from "./componenet/Statement3";
 import Defaultprops from "./componenet/defaultprops";
 import Anmoysous from "./componenet/Anmoysous";
 import Goo from "./componenet/Goo";
+import ApiSimulation from "./componenet/UseeffectClass"; 
 import { StrictMode } from "react";
 function App() {
   return (
@@ -36,6 +37,9 @@ function App() {
     <Defaultprops var1={true} var2={"blue"} var3={"abc"} />
   </StrictMode>
 <Goo/>
+
+    <ApiSimulation />
+
     </>
   );
 }
