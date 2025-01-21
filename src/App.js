@@ -11,6 +11,9 @@ import Anmoysous from "./componenet/Anmoysous";
 import Goo from "./componenet/Goo";
 import ApiSimulation from "./componenet/UseeffectClass"; 
 import { StrictMode } from "react";
+import TestComponent from "./componenet/customcomp3";
+
+
 function App() {
   return (
     <>
@@ -40,7 +43,9 @@ function App() {
 
     <ApiSimulation />
 
+<TestComponent/>
     </>
+    
   );
 }
 
