@@ -1,6 +1,6 @@
-import { use, useEffect,useState } from "react";
+import {  useEffect,useState } from "react";
 
-import {Promise, resolve} from "bluebird";
+import {Promise} from "bluebird";
 Promise.config({cancellation:true});
 
 function fetchUser(){
@@ -26,11 +26,22 @@ function NewConponnent1(){
         }
     });
     return(
-        <div>
+        <>
+ <div>
             User Id: {id},<br/>
             Name: {name}
         </div>
+        
+        </>
+       
+
+        
     )
 }
 
 export default NewConponnent1
+
+
+
+// Create carousel (image Changer) using useeffects .place 4 images in public directory and change image at interval of 4 seconds
+

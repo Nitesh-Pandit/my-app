@@ -12,8 +12,9 @@ import Goo from "./componenet/Goo";
 import ApiSimulation from "./componenet/UseeffectClass"; 
 import { StrictMode } from "react";
 import TestComponent from "./componenet/customcomp3";
-
-
+import ImageCarousel from "./componenet/imageCrasual";
+import { UserProvider } from "./componenet/use_con_exmp1";
+import UseContextExample from "./componenet/use_con_exmp3";
 function App() {
   return (
     <>
@@ -44,6 +45,10 @@ function App() {
     <ApiSimulation />
 
 <TestComponent/>
+<ImageCarousel/>
+<UserProvider/>
+
+<UseContextExample />
     </>
     
   );
