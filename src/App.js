@@ -1,4 +1,5 @@
 import "./App.css";
+import React, { useState } from 'react';
 import Navbar from "./Navbar";
 import About from "./About";
 import Home from "./Home";
@@ -15,7 +16,27 @@ import TestComponent from "./componenet/customcomp3";
 import ImageCarousel from "./componenet/imageCrasual";
 import { UserProvider } from "./componenet/use_con_exmp1";
 import UseContextExample from "./componenet/use_con_exmp3";
+import TotalAmount from "./componenet/TotalAmount";
 function App() {
+  const [principle, setPrinciple] = useState('');
+  const [rate, setRate] = useState('');
+  const [duration, setDuration] = useState('');
+  const [totalAmount, setTotalAmount] = useState(null);
+
+  const calculateTotal = () => {
+    const P = parseFloat(principle);
+    const R = parseFloat(rate);
+    const T = parseFloat(duration);
+
+    if (isNaN(P) || isNaN(R) || isNaN(T)) {
+      alert("Please enter valid numbers!");
+      return;
+    }
+
+    const interest = (P * R * T) / 100;
+    const total = P + interest;
+    setTotalAmount(total.toFixed(2));
+  };
   return (
     <>
       <Navbar />
@@ -49,6 +70,19 @@ function App() {
 <UserProvider/>
 
 <UseContextExample />
+<TotalAmount
+        principle={principle} setPrinciple={setPrinciple}
+        rate={rate} setRate={setRate}
+        duration={duration} setDuration={setDuration}
+        calculateTotal={calculateTotal}
+      />
+
+      <button onClick={calculateTotal}>Calculate</button>
+
+      {totalAmount !== null && (
+        <h2>Total Amount: ₹{totalAmount}</h2>
+      )}
+
     </>
     
   );
