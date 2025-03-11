@@ -17,6 +17,8 @@ import ImageCarousel from "./componenet/imageCrasual";
 import { UserProvider } from "./componenet/use_con_exmp1";
 import UseContextExample from "./componenet/use_con_exmp3";
 import TotalAmount from "./componenet/TotalAmount";
+
+
 function App() {
   const [principle, setPrinciple] = useState('');
   const [rate, setRate] = useState('');
